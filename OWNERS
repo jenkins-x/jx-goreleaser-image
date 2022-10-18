@@ -1,5 +1,4 @@
 approvers:
-- jenkins-x-bot
-options: {}
+- maintainers
 reviewers:
-- jenkins-x-bot
+- maintainers
