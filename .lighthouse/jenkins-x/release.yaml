@@ -6,7 +6,7 @@ metadata:
 spec:
   pipelineSpec:
     tasks:
-    - name: from-build-pack
+    - name: release-goreleaser
       resources: {}
       taskSpec:
         metadata: {}
@@ -37,5 +37,5 @@ spec:
           resources: {}
   podTemplate: {}
   serviceAccountName: tekton-bot
-  timeout: 12h0m0s
+  timeout: 1h
 status: {}
