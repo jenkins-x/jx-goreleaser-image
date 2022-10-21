@@ -1,0 +1,5 @@
+approvers:
+- jenkins-x-bot
+options: {}
+reviewers:
+- jenkins-x-bot
