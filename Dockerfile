@@ -13,7 +13,7 @@ RUN apk add --no-cache bash \
     build-base
 
 # Install syft
-RUN curl -sSfL https://raw.githubusercontent.com/anchore/syft/main/install.sh | sh -s -- -b /usr/local/bin v0.60.1 &&\
+RUN curl -sSfL https://raw.githubusercontent.com/anchore/syft/main/install.sh | sh -s -- -b /usr/local/bin v0.62.0 &&\
     chmod +x /usr/local/bin/syft &&\
     syft --version
 
@@ -22,7 +22,7 @@ COPY --from=gcr.io/projectsigstore/cosign:v1.13.1@sha256:ac8e08a2141e093f4fd7d1d
 RUN cosign version
 
 # Install goreleaser
-RUN curl -L https://github.com/goreleaser/goreleaser/releases/download/v1.12.3/goreleaser_Linux_x86_64.tar.gz | tar xzv &&\
+RUN curl -L https://github.com/goreleaser/goreleaser/releases/download/v1.13.0/goreleaser_Linux_x86_64.tar.gz | tar xzv &&\
     rm -rf README.md completions manpages &&\
     mv goreleaser /usr/local/bin &&\
     goreleaser -v
