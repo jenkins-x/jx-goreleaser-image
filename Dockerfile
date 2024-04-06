@@ -18,7 +18,7 @@ RUN curl -sSfL https://raw.githubusercontent.com/anchore/syft/main/install.sh | 
     syft --version
 
 # Install cosign
-COPY --from=gcr.io/projectsigstore/cosign:v1.13.1@sha256:ac8e08a2141e093f4fd7d1d0b05448804eb3771b66574b13ad73e31b460af64d /ko-app/cosign /usr/local/bin/cosign
+COPY --from=gcr.io/projectsigstore/cosign:v2.2.3@sha256:8fc9cad121611e8479f65f79f2e5bea58949e8a87ffac2a42cb99cf0ff079ba7 /ko-app/cosign /usr/local/bin/cosign
 RUN cosign version
 
 # Install goreleaser
