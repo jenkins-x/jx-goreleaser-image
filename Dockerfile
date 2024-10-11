@@ -1,4 +1,4 @@
-FROM golang:1.22.3-alpine3.19@sha256:f1fe698725f6ed14eb944dc587591f134632ed47fc0732ec27c7642adbe90618
+FROM golang:1.23.2-alpine3.19@sha256:f6392ffebb028fed5ffe743ddb9716e38402c978779edd66474bb5d05f5e65e4
 
 # Add image labels
 LABEL org.opencontainers.image.title jx-goreleaser-image
@@ -22,7 +22,7 @@ COPY --from=gcr.io/projectsigstore/cosign:v2.2.4@sha256:bed7ba33a8610c1607c16dee
 RUN cosign version
 
 # Install goreleaser
-RUN curl -L https://github.com/goreleaser/goreleaser/releases/download/v1.26.1/goreleaser_Linux_x86_64.tar.gz | tar xzv &&\
+RUN curl -L https://github.com/goreleaser/goreleaser/releases/download/v2.3.2/goreleaser_Linux_x86_64.tar.gz | tar xzv &&\
     rm -rf README.md completions manpages &&\
     mv goreleaser /usr/local/bin &&\
     goreleaser -v
