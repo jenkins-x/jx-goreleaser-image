@@ -13,7 +13,7 @@ RUN apk add --no-cache bash \
     build-base
 
 # Install syft
-RUN curl -sSfL https://raw.githubusercontent.com/anchore/syft/main/install.sh | sh -s -- -b /usr/local/bin v1.4.1 &&\
+RUN curl -sSfL https://raw.githubusercontent.com/anchore/syft/main/install.sh | sh -s -- -b /usr/local/bin v1.27.0 &&\
     chmod +x /usr/local/bin/syft &&\
     syft --version
 
